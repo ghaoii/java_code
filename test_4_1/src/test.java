@@ -58,14 +58,21 @@
 //    System.out.println(a);
 //}
 
+//public class test {
+//    public static void main(String[] args) {
+//        int a = 10;
+//        a = 20;
+//        final int b = 30;
+//        b = 40;
+//        System.out.println(a);
+//        System.out.println(b);
+//    }
+//}
+
 public class test {
     public static void main(String[] args) {
         int a = 10;
-        a = 20;
-        final int b = 30;
-        b = 40;
         System.out.println(a);
-        System.out.println(b);
     }
 }
 
