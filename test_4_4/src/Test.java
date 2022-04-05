@@ -211,7 +211,7 @@ import java.util.Scanner;
 //输出一个整数的每一位，如：123的每一位是1 ， 2 ， 3
 //public class Test {
 //    public static void main(String[] args) {
-//        int a =123;
+//        int a =10200;
 //        //判断a是几位数
 //        int num = a;
 //        int count = 0;
@@ -224,8 +224,12 @@ import java.util.Scanner;
 //            j *= 10;
 //        }
 //        //逆序输出
-//        while(a > 0){
-//            System.out.print(a / j + " ");
+//        while(j != 0){
+//            if(j != 1) {
+//                System.out.print(a / j + ", ");
+//            }else{
+//                System.out.println(a / j);
+//            }
 //            a %= j;
 //            j /= 10;
 //        }
@@ -234,18 +238,35 @@ import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) {
-        int a = 123;
-        int b = 0;
+        int a = 1020;
+        //统计a的位数
+        int num = a;
+        int count = 0;
+        while(num != 0){
+            num /= 10;
+            count++;
+        }
         //将a逆置
+        int b = 0;
         while(a > 0){
             b = b * 10 + a % 10;
             a /= 10;
         }
         //打印
-        while(b > 0){
-            System.out.print(b % 10 + " ");
+        while( b != 0 || count != 0){
+            if(count > 1){
+                System.out.print(b % 10 + ", ");
+            }else{
+                System.out.print(b % 10);
+            }
             b /= 10;
+            count--;
         }
+
+//        while(b > 0){
+//            System.out.print(b % 10 + " ");
+//            b /= 10;
+//        }
     }
 }
 
