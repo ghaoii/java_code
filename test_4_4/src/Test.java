@@ -236,32 +236,33 @@ import java.util.Scanner;
 //    }
 //}
 
-public class Test {
-    public static void main(String[] args) {
-        int a = 1020;
-        //统计a的位数
-        int num = a;
-        int count = 0;
-        while(num != 0){
-            num /= 10;
-            count++;
-        }
-        //将a逆置
-        int b = 0;
-        while(a > 0){
-            b = b * 10 + a % 10;
-            a /= 10;
-        }
-        //打印
-        while( b != 0 || count != 0){
-            if(count > 1){
-                System.out.print(b % 10 + ", ");
-            }else{
-                System.out.print(b % 10);
-            }
-            b /= 10;
-            count--;
-        }
+//public class Test {
+//    public static void main(String[] args) {
+//        Scanner in = new Scanner(System.in);
+//        int a = in.nextInt();
+//        //统计a的位数
+//        int num = a;
+//        int count = 0;
+//        while(num != 0){
+//            num /= 10;
+//            count++;
+//        }
+//        //将a逆置
+//        int b = 0;
+//        while(a > 0){
+//            b = b * 10 + a % 10;
+//            a /= 10;
+//        }
+//        //打印
+//        while( b != 0 || count != 0){
+//            if(count > 1){
+//                System.out.print(b % 10 + ", ");
+//            }else{
+//                System.out.print(b % 10);
+//            }
+//            b /= 10;
+//            count--;
+//        }
 
 //        while(b > 0){
 //            System.out.print(b % 10 + " ");
