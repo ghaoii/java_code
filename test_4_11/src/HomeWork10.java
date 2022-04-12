@@ -5,27 +5,23 @@ public class HomeWork10 {
     public static void main(String[] args) {
         int[] arr1 = {1,2,3,4,7,9,8};
         int[] arr2 = {1,2,3,5,7,9,8};
-        threeOdd(arr1);
-        threeOdd(arr2);
+        System.out.println(threeOdd(arr1));
+        System.out.println(threeOdd(arr2));
     }
 
-    public static void threeOdd(int[] arr){
-        boolean tmp = false;
+    public static boolean threeOdd(int[] arr){
+        int count = 0;
         for (int i = 0; i < arr.length; i++) {
-            int count = 0;
-            while(arr[i] % 2 == 1){
+            if(arr[i]%2 == 1){
                 count++;
-                i++;
-            }
-            if(count >= 3){
-                tmp = true;
-                System.out.println("true");
-                break;
+                if(count >= 3){
+                    return true;
+                }
+            }else{
+                count = 0;
             }
         }
-        if(!tmp){
-            System.out.println("false");
-        }
+        return false;
     }
 
 }
