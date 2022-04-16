@@ -3,16 +3,20 @@ import com.oracle.webservices.internal.impl.internalspi.encoding.StreamDecoder;
 
 public class Test {
     public static void main(String[] args) {
-        Animal animal = new Animal("王五");
+        //Animal animal1 = new Animal();
+        Animal animal2 = new Animal("王五");
+       // System.out.println(Animal.age);
     }
 }
 
 
 class Animal{
     private String name = "张三";
-    static final int age = 10;
+    static int age;
+    final String country = "China";
 
      static {
+         age = 18;
         System.out.println("3.Animal的静态代码块");
         System.out.println(age);
     }
@@ -23,6 +27,7 @@ class Animal{
         System.out.println(name);
     }
     public Animal(){
+         //name = null;
         System.out.println("1.Animal的无参构造");
     }
     public Animal(String name){
