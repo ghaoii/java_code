@@ -1,15 +1,8 @@
+import java.math.RoundingMode;
 
+public class Test2<one> {
+    public static void main(String[] args) {
 
-
-public class Test2 {
-
+    }
 }
 
-class Person{
-    private String name;
-    private int age;
-    private String sex;
-
-
-
-}
